@@ -71,3 +71,61 @@ This Telegram bot allows users to download videos from supported OTT platforms. 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/telegram-bot.git
+2. Install Dependencies: Navigate to the project directory and install the necessary Python packages:
+
+bash
+Copy code
+pip install -r requirements.txt
+Set Up Your Bot:
+
+Open bot/config.py and replace the following:
+BOT_TOKEN with the token from BotFather.
+ADMIN_USER_ID with your admin Telegram user ID.
+You can find your ADMIN_USER_ID by using @userinfobot on Telegram.
+Run the Bot: After setting everything up, run the bot:
+
+bash
+Copy code
+python main.py
+Bot Flow
+User Flow:
+
+When a user starts the bot (/start), they receive a welcome message.
+They can see available OTT platforms using the /otts command.
+To upgrade to a premium plan, they can use the /upgrade command.
+Admin Flow:
+
+Admins can manage users with the /add_premium and /remove_premium commands.
+Admins can broadcast messages to all users with /broadcast.
+Admins can view bot statistics with /stats.
+Admins can set up a Telegram channel for direct video distribution using /bin_channel.
+Video Download Flow
+Pre-Download Options:
+
+Users choose the video quality and audio language before the download begins.
+Download Process:
+
+Only premium users can download videos, and they are limited to the number of downloads specified in their plan.
+Admins can download unlimited videos without restrictions.
+Video Upload:
+
+Users and admins can upload videos directly to Telegram or Google Drive.
+Post-Download:
+
+After downloading, the video file is sent to the user via the bot, and admins can push the file to their "Bin Channel."
+Additional Notes
+Ensure the bot is used for legal purposes only.
+This bot does not provide functionality for OTT platforms that require authentication or bypassing login mechanisms.
+To manage your bot and update features, modify the relevant files within the bot/ folder.
+Contributing
+If you'd like to contribute to the bot, please fork the repository, make your changes, and submit a pull request.
+
+License
+This bot is for educational purposes only. Please make sure to follow all applicable laws and terms of service of the content providers.
+
+yaml
+Copy code
+
+---
+
+You can copy and paste this directly into your README.md file. Let me know if you need further adjustments!
